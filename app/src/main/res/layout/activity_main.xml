@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/imgResult"
+        android:layout_height="100sp"
+        android:layout_width="100sp"
+        android:layout_marginTop="50dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/empty" />
+
+    <ImageView
+        android:id="@+id/imgMan"
+        android:layout_width="93dp"
+        android:layout_height="143dp"
+        android:layout_marginStart="22dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginBottom="24dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgResult"
+        app:srcCompat="@drawable/man" />
+
+    <TextView
+        android:id="@+id/playerScore"
+        android:layout_width="34dp"
+        android:layout_height="74dp"
+        android:layout_marginStart="21dp"
+        android:text="0"
+        android:textSize="55sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/resultText"
+        app:layout_constraintStart_toEndOf="@+id/imgMan"
+        app:layout_constraintTop_toBottomOf="@+id/imgResult" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="X"
+        android:textStyle="bold"
+        android:textSize="55sp"
+        android:textColor="#002971"
+        app:layout_constraintBottom_toTopOf="@+id/resultText"
+        app:layout_constraintEnd_toStartOf="@+id/robotScore"
+        app:layout_constraintStart_toEndOf="@+id/playerScore"
+        app:layout_constraintTop_toBottomOf="@+id/imgResult" />
+
+    <TextView
+        android:id="@+id/robotScore"
+        android:layout_width="34dp"
+        android:layout_height="74dp"
+        android:layout_marginEnd="21dp"
+        android:text="0"
+        android:textSize="55sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/resultText"
+        app:layout_constraintEnd_toStartOf="@+id/imgRobot"
+        app:layout_constraintTop_toBottomOf="@+id/imgResult" />
+
+    <ImageView
+        android:id="@+id/imgRobot"
+        android:layout_width="93dp"
+        android:layout_height="143dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="36dp"
+        app:layout_constraintBottom_toTopOf="@+id/resultText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/robot" />
+
+    <TextView
+        android:id="@+id/resultText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:text="Choose an option below:"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgMan" />
+
+    <ImageView
+        android:id="@+id/imgRock"
+        android:layout_width="100sp"
+        android:layout_height="100sp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="22dp"
+        android:onClick="rockSelected"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/imgPaper"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/resultText"
+        app:layout_constraintVertical_bias="0.212"
+        app:srcCompat="@drawable/rock" />
+
+    <ImageView
+        android:id="@+id/imgPaper"
+        android:layout_width="100sp"
+        android:layout_height="100sp"
+        android:layout_marginEnd="20dp"
+        android:onClick="paperSelected"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/imgScissor"
+        app:layout_constraintStart_toEndOf="@+id/imgRock"
+        app:layout_constraintTop_toBottomOf="@+id/resultText"
+        app:layout_constraintVertical_bias="0.212"
+        app:srcCompat="@drawable/paper" />
+
+    <ImageView
+        android:id="@+id/imgScissor"
+        android:layout_width="100sp"
+        android:layout_height="100sp"
+        android:layout_marginEnd="32dp"
+        android:onClick="scissorSelected"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imgPaper"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/resultText"
+        app:layout_constraintVertical_bias="0.212"
+        app:srcCompat="@drawable/scissor" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
